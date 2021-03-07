@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: MqttListener
+  profiles:
+    active: ${PROFILE:dev}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show_sql: true
+        format_sql: false
+        generate_statistics: false
+        jdbc:
+          batch_size: 30
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 2048KB
+      max-request-size: 2048KB
+  main:
+    allow-bean-definition-overriding: true
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/IoTDatas?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 88926257Uygar_
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://localhost:3306/IoTDatas?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: HzzMYBTdBhhx5NMD
