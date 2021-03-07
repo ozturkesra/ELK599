@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3hk-SR-PKw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Veriler-->
+        <scene sceneID="POI-0h-H4o">
+            <objects>
+                <viewController id="O10-Mj-x9e" customClass="ReportViewController" customModule="EnerjiHarvesterBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwd-lH-VAW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q02-Ox-ffW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjr-te-X0V" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kOm-Fc-v4j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q02-Ox-ffW" firstAttribute="leading" secondItem="kOm-Fc-v4j" secondAttribute="leading" id="DCI-QQ-1IC"/>
+                            <constraint firstItem="kOm-Fc-v4j" firstAttribute="trailing" secondItem="Q02-Ox-ffW" secondAttribute="trailing" id="OGG-Pi-awn"/>
+                            <constraint firstItem="kOm-Fc-v4j" firstAttribute="bottom" secondItem="Q02-Ox-ffW" secondAttribute="bottom" id="Rau-vt-xvM"/>
+                            <constraint firstItem="Q02-Ox-ffW" firstAttribute="top" secondItem="kOm-Fc-v4j" secondAttribute="top" id="bCU-mD-ttq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Veriler" image="chart.pie" catalog="system" id="ksX-g8-zSN"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="Wjr-te-X0V" id="MXO-jZ-2HS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lif-VR-3Bh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1509" y="473"/>
+        </scene>
+        <!--Beacon-->
+        <scene sceneID="LOA-eh-lLY">
+            <objects>
+                <viewController id="Edp-xM-N8T" customClass="BeaconScannerViewController" customModule="EnerjiHarvesterBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cse-Yl-L16">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTt-Ue-jLK" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="79" y="220" width="256" height="256"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="6v8-U7-v99"/>
+                                    <constraint firstAttribute="width" secondItem="XTt-Ue-jLK" secondAttribute="height" multiplier="1:1" id="ncp-p3-xdk"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBeacon Aranıyor..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-as-EeN">
+                                <rect key="frame" x="136" y="488" width="142.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lpc-5Z-sSY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XTt-Ue-jLK" firstAttribute="centerY" secondItem="Cse-Yl-L16" secondAttribute="centerY" constant="-100" id="9LF-cK-yVn"/>
+                            <constraint firstItem="XTt-Ue-jLK" firstAttribute="centerX" secondItem="Cse-Yl-L16" secondAttribute="centerX" id="CWS-7M-ULf"/>
+                            <constraint firstItem="Zhe-as-EeN" firstAttribute="centerX" secondItem="Cse-Yl-L16" secondAttribute="centerX" id="JVv-Yy-nS3"/>
+                            <constraint firstItem="Zhe-as-EeN" firstAttribute="centerY" secondItem="Cse-Yl-L16" secondAttribute="centerY" constant="50" id="zfp-fF-Jb6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Beacon" image="wifi" catalog="system" landscapeImage="wifi" id="Zoa-eI-JB7"/>
+                    <connections>
+                        <outlet property="animationView" destination="XTt-Ue-jLK" id="8oL-oW-zZL"/>
+                        <outlet property="lblStatusMessage" destination="Zhe-as-EeN" id="nJn-Mn-Hwk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfA-el-8iB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1548" y="-221"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wJY-Ys-htV">
+            <objects>
+                <tabBarController id="3hk-SR-PKw" customClass="ViewController" customModule="EnerjiHarvesterBeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PEi-AY-vKs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Edp-xM-N8T" kind="relationship" relationship="viewControllers" id="xc5-WO-6s2"/>
+                        <segue destination="O10-Mj-x9e" kind="relationship" relationship="viewControllers" id="M0s-AF-u4l"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIX-pg-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2362" y="161"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="XTt-Ue-jLK"/>
+    </designables>
+    <resources>
+        <image name="chart.pie" catalog="system" width="128" height="121"/>
+        <image name="wifi" catalog="system" width="128" height="91"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
