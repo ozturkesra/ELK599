@@ -1,0 +1,10 @@
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\obj\Debug\SerialPortSender.csprojAssemblyReference.cache
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\obj\Debug\SerialPortSender.Form1.resources
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\obj\Debug\SerialPortSender.Properties.Resources.resources
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\obj\Debug\SerialPortSender.csproj.GenerateResource.cache
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\obj\Debug\SerialPortSender.csproj.CoreCompileInputs.cache
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\bin\Debug\SerialPortSender.exe.config
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\bin\Debug\SerialPortSender.exe
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\bin\Debug\SerialPortSender.pdb
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\obj\Debug\SerialPortSender.exe
+C:\Users\ESRA\source\repos\SerialPortSender\SerialPortSender\obj\Debug\SerialPortSender.pdb
